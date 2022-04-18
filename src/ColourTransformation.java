@@ -105,16 +105,32 @@ public class ColourTransformation
 	 */
 	private void apply(int x, int y)
 	{
-		// Apply transformation to the colour vector at this pixel
+		// Get new RGB values
+		int newR = (int) dot(getRGBVector(x, y), col1) % 255; 
+		int newG = (int) dot(getRGBVector(x, y), col2) % 255; 
+		int newB = (int) dot(getRGBVector(x, y), col3) % 255; 
+		
+		// Wrap around negative numbers
+		
+		if(newR < 0)
+			newR += 255;
+		
+		if(newG < 0)
+			newG += 255;
+		
+		if(newB < 0)
+			newB += 255;
+		
+		/* Apply transformation to the colour vector at this pixel
 		// (wrap around 255)
 		int[] new_color = new int[]{
 			Math.abs((int) dot(getRGBVector(x, y), col1)) % 255,		
 			Math.abs((int) dot(getRGBVector(x, y), col2)) % 255,		
 			Math.abs((int) dot(getRGBVector(x, y), col3)) % 255
-		};
+		};*/
 	
 		// Create new colour
-		Color newColor = new Color(new_color[0], new_color[1], new_color[2]);
+		Color newColor = new Color(newR, newG, newB);
 		int rgbValue = newColor.getRGB();
 		
 		// Change colour of pixel to new colour
