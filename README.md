@@ -1,6 +1,8 @@
 # colour-vectors
 Java software that takes in an image, interprets each pixel as a 3D vector, applies a linear transformation to each pixel, and creates a new image.
 
+Check out a demonstration of this program [on my website](https://www.haywalk.ca/math/colours-as-vectors.html).
+
 ## Usage
 
 `$ java -jar colourvect.jar [IMAGE.jpg]`
