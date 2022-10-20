@@ -3,6 +3,8 @@ Java software that takes in an image, interprets each pixel as a 3D vector, appl
 
 Check out a demonstration of this program [on my website](https://www.haywalk.ca/math/colours-as-vectors.html).
 
+**Check out the [graphical frontend](https://github.com/haywalk/color-vectors-gui) I made for this program using JavaFX!**
+
 ## Usage
 
 `$ java -jar colourvect.jar [IMAGE.jpg]`
